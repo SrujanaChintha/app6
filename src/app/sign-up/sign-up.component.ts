@@ -10,16 +10,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './sign-up.component.css'
 })
 export class SignUpComponent {
-  user = {
-    name: '',
-    email: '',
-    password: ''
-  };
-
-  onSubmit(form: any) {
-    if (form.valid) {
-      console.log('Sign Up Data:', this.user);
-      this.user = { name: '', email: '', password: '' }; // Reset form fields
+  
+  
+    onSubmit(signUpForm: any) {
+      if (signUpForm.valid) {
+        console.log("Form Submitted!", signUpForm.value);
+      }
     }
   }
-}
+  
